@@ -5,3 +5,6 @@ C:\git\RadishCoin\RadishCoinConsoleApp\RadishCoinConsoleApp\obj\Debug\RadishCoin
 C:\git\RadishCoin\RadishCoinConsoleApp\RadishCoinConsoleApp\obj\Debug\RadishCoinConsoleApp.csproj.CoreCompileInputs.cache
 C:\git\RadishCoin\RadishCoinConsoleApp\RadishCoinConsoleApp\obj\Debug\RadishCoinConsoleApp.exe
 C:\git\RadishCoin\RadishCoinConsoleApp\RadishCoinConsoleApp\obj\Debug\RadishCoinConsoleApp.pdb
+C:\git\RadishCoin\RadishCoinConsoleApp\RadishCoinConsoleApp\bin\Debug\Newtonsoft.Json.dll
+C:\git\RadishCoin\RadishCoinConsoleApp\RadishCoinConsoleApp\bin\Debug\Newtonsoft.Json.xml
+C:\git\RadishCoin\RadishCoinConsoleApp\RadishCoinConsoleApp\obj\Debug\RadishCo.CB2B3FAB.Up2Date

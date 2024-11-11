@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
+using Newtonsoft.Json;
 
 namespace RadishCoinConsoleApp
 {
@@ -32,6 +34,10 @@ namespace RadishCoinConsoleApp
             this.chain.Add(newBlock);
         }
 
+        public string ToJson()
+        {
+            return JsonConvert.SerializeObject(this.chain, Newtonsoft.Json.Formatting.Indented);
+        }
     }
     
 
