@@ -1,4 +1,5 @@
 ﻿using System;
+using System.CodeDom;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,19 +25,37 @@ namespace RadishCoinConsoleApp
 
         public Block GetLatestBlock()
         {
-            return this.chain[this.chain.Count - 1];
+            return this.chain[-1];
         }
 
         public void AddBlock(Block newBlock)
         {
             newBlock.PreviousHash = this.GetLatestBlock().Hash;
-            newBlock.Hash = newBlock.CalculateHash();
+            newBlock.MineBlock(DifficultyEnum.VeryDifficult);
             this.chain.Add(newBlock);
         }
 
-        public string ToJson()
+        public string ToJson(object obj)
         {
-            return JsonConvert.SerializeObject(this.chain, Newtonsoft.Json.Formatting.Indented);
+            return JsonConvert.SerializeObject(obj, Newtonsoft.Json.Formatting.Indented);
+        }
+
+        public bool IsChainValid()
+        {
+            for (int i = 1; i < this.chain.Count; i++)
+            {
+                Block currentBlock = chain[i];
+                Block previousBlock = chain[i-1];
+
+                if (currentBlock.Hash != currentBlock.CalculateHash())
+                {
+                    return false;
+                }
+                else if (currentBlock.Hash != previousBlock.Hash){
+                    return false;
+                }
+            }
+            return true;
         }
     }
     

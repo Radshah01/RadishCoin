@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="Block.cs" />
     <Compile Include="Blockchain.cs" />
+    <Compile Include="DifficultyEnum.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

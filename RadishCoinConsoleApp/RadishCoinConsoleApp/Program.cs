@@ -12,15 +12,30 @@ namespace RadishCoinConsoleApp
     {
         static void Main(string[] args)
         {
-           Blockchain RadishCoin = new Blockchain();
-            RadishCoin.AddBlock(new Block(1, DateTime.Parse("10/10/2024"), "amount: 4"));
-            RadishCoin.AddBlock(new Block(2, DateTime.Parse("11/11/2024"), "amount: 10"));
+           
+            Blockchain RadishCoin = new Blockchain();
+
+
+            var transaction = new { amount = 4 };
+            var transaction2 = new { amount = 22 };
+
+            //RadishCoin.AddBlock(new Block(1, DateTime.Parse("10/10/2024"), transaction));
+            //RadishCoin.AddBlock(new Block(2, DateTime.Parse("11/11/2024"), transaction2));
+
+
 
             //for (int i = 0; i < RadishCoin.chain.Count; i++) {
             //    Console.WriteLine(RadishCoin.chain[i].ToString());
             //}
-            
-            Console.WriteLine(RadishCoin.ToJson());
+
+            //Console.WriteLine(RadishCoin.ToJson(RadishCoin.chain));
+
+            Console.WriteLine("Wait for each Block to be mined!\n");
+            Console.WriteLine("Block 1 is being mined...");
+            RadishCoin.AddBlock(new Block(1, DateTime.Parse("10/10/2024"), transaction));
+
+            Console.WriteLine("\n\nBlock 2 is being mined...");
+            RadishCoin.AddBlock(new Block(2, DateTime.Parse("11/11/2024"), transaction2));
 
             Console.ReadLine();
 
