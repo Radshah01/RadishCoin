@@ -20,10 +20,12 @@ namespace RadishCoinConsoleApp
 
         public string Hash { get; set; } = "";
 
-        public string PreviousHash { get; set; }
+        public string PreviousHash { get; set; } 
 
-        public DifficultyEnum Difficulty { get; set; }
+        public  DifficultyEnum Difficulty { get; set; }
 
+        //randomize enum
+        
         public int nonce { get; set; } = 0;
 
 
@@ -34,7 +36,6 @@ namespace RadishCoinConsoleApp
             this.Data = data;
             this.PreviousHash = previousHash;
             this.Hash = this.CalculateHash();
-            
         }
 
         public string ToJson(object obj)
@@ -67,6 +68,7 @@ namespace RadishCoinConsoleApp
             {
                 this.nonce++;
                 this.Hash = this.CalculateHash() ;
+
                 
             }
 

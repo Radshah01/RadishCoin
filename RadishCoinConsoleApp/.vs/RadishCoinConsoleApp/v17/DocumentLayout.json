@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\git\\RadishCoin\\RadishCoinConsoleApp\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{1595190B-F949-4D0F-9862-DEDC8C08869D}|RadishCoinConsoleApp\\RadishCoinConsoleApp.csproj|C:\\git\\RadishCoin\\RadishCoinConsoleApp\\radishcoinconsoleapp\\block.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1595190B-F949-4D0F-9862-DEDC8C08869D}|RadishCoinConsoleApp\\RadishCoinConsoleApp.csproj|solutionrelative:radishcoinconsoleapp\\block.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1595190B-F949-4D0F-9862-DEDC8C08869D}|RadishCoinConsoleApp\\RadishCoinConsoleApp.csproj|c:\\git\\radishcoin\\radishcoinconsoleapp\\radishcoinconsoleapp\\blockchain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1595190B-F949-4D0F-9862-DEDC8C08869D}|RadishCoinConsoleApp\\RadishCoinConsoleApp.csproj|solutionrelative:radishcoinconsoleapp\\blockchain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1595190B-F949-4D0F-9862-DEDC8C08869D}|RadishCoinConsoleApp\\RadishCoinConsoleApp.csproj|c:\\git\\radishcoin\\radishcoinconsoleapp\\radishcoinconsoleapp\\difficultyenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1595190B-F949-4D0F-9862-DEDC8C08869D}|RadishCoinConsoleApp\\RadishCoinConsoleApp.csproj|solutionrelative:radishcoinconsoleapp\\difficultyenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1595190B-F949-4D0F-9862-DEDC8C08869D}|RadishCoinConsoleApp\\RadishCoinConsoleApp.csproj|c:\\git\\radishcoin\\radishcoinconsoleapp\\radishcoinconsoleapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1595190B-F949-4D0F-9862-DEDC8C08869D}|RadishCoinConsoleApp\\RadishCoinConsoleApp.csproj|C:\\git\\RadishCoin\\RadishCoinConsoleApp\\radishcoinconsoleapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1595190B-F949-4D0F-9862-DEDC8C08869D}|RadishCoinConsoleApp\\RadishCoinConsoleApp.csproj|solutionrelative:radishcoinconsoleapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1595190B-F949-4D0F-9862-DEDC8C08869D}|RadishCoinConsoleApp\\RadishCoinConsoleApp.csproj|c:\\git\\radishcoin\\radishcoinconsoleapp\\radishcoinconsoleapp\\block.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1595190B-F949-4D0F-9862-DEDC8C08869D}|RadishCoinConsoleApp\\RadishCoinConsoleApp.csproj|solutionrelative:radishcoinconsoleapp\\block.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1595190B-F949-4D0F-9862-DEDC8C08869D}|RadishCoinConsoleApp\\RadishCoinConsoleApp.csproj|C:\\git\\RadishCoin\\RadishCoinConsoleApp\\radishcoinconsoleapp\\difficultyenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1595190B-F949-4D0F-9862-DEDC8C08869D}|RadishCoinConsoleApp\\RadishCoinConsoleApp.csproj|solutionrelative:radishcoinconsoleapp\\difficultyenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -43,6 +43,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Blockchain.cs",
+              "DocumentMoniker": "C:\\git\\RadishCoin\\RadishCoinConsoleApp\\RadishCoinConsoleApp\\Blockchain.cs",
+              "RelativeDocumentMoniker": "RadishCoinConsoleApp\\Blockchain.cs",
+              "ToolTip": "C:\\git\\RadishCoin\\RadishCoinConsoleApp\\RadishCoinConsoleApp\\Blockchain.cs",
+              "RelativeToolTip": "RadishCoinConsoleApp\\Blockchain.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACIAAAA/AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-11T05:33:12.394Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "DifficultyEnum.cs",
               "DocumentMoniker": "C:\\git\\RadishCoin\\RadishCoinConsoleApp\\RadishCoinConsoleApp\\DifficultyEnum.cs",
               "RelativeDocumentMoniker": "RadishCoinConsoleApp\\DifficultyEnum.cs",
@@ -56,25 +69,12 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Blockchain.cs",
-              "DocumentMoniker": "C:\\git\\RadishCoin\\RadishCoinConsoleApp\\RadishCoinConsoleApp\\Blockchain.cs",
-              "RelativeDocumentMoniker": "RadishCoinConsoleApp\\Blockchain.cs",
-              "ToolTip": "C:\\git\\RadishCoin\\RadishCoinConsoleApp\\RadishCoinConsoleApp\\Blockchain.cs*",
-              "RelativeToolTip": "RadishCoinConsoleApp\\Blockchain.cs*",
-              "ViewState": "AQIAABsAAAAAAAAAAAAgwCEAAAA7AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-11T05:33:12.394Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "Block.cs",
               "DocumentMoniker": "C:\\git\\RadishCoin\\RadishCoinConsoleApp\\RadishCoinConsoleApp\\Block.cs",
               "RelativeDocumentMoniker": "RadishCoinConsoleApp\\Block.cs",
               "ToolTip": "C:\\git\\RadishCoin\\RadishCoinConsoleApp\\RadishCoinConsoleApp\\Block.cs",
               "RelativeToolTip": "RadishCoinConsoleApp\\Block.cs",
-              "ViewState": "AQIAACoAAAAAAAAAAAAIwEUAAAAQAAAA",
+              "ViewState": "AQIAACEAAAAAAAAAAAAQwDEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-11T05:17:10.984Z",
               "EditorCaption": ""
@@ -87,7 +87,7 @@
               "RelativeDocumentMoniker": "RadishCoinConsoleApp\\Program.cs",
               "ToolTip": "C:\\git\\RadishCoin\\RadishCoinConsoleApp\\RadishCoinConsoleApp\\Program.cs",
               "RelativeToolTip": "RadishCoinConsoleApp\\Program.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAA+wCAAAABEAAAA",
+              "ViewState": "AQIAABAAAAAAAAAAAAAMwCgAAAB9AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-11T05:10:31.314Z",
               "EditorCaption": ""

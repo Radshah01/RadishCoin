@@ -25,13 +25,14 @@ namespace RadishCoinConsoleApp
 
         public Block GetLatestBlock()
         {
-            return this.chain[-1];
+            return this.chain[this.chain.Count -1];
         }
 
         public void AddBlock(Block newBlock)
         {
+            Random rnd = new Random();
             newBlock.PreviousHash = this.GetLatestBlock().Hash;
-            newBlock.MineBlock(DifficultyEnum.VeryDifficult);
+            newBlock.MineBlock((DifficultyEnum)rnd.Next(1, 4));
             this.chain.Add(newBlock);
         }
 

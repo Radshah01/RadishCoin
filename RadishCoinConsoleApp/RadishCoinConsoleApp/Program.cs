@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Runtime.Remoting.Messaging;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
@@ -16,8 +17,8 @@ namespace RadishCoinConsoleApp
             Blockchain RadishCoin = new Blockchain();
 
 
-            var transaction = new { amount = 4 };
-            var transaction2 = new { amount = 22 };
+            object transaction = new { amount = 4 };
+            object transaction2 = new { amount = 22 };
 
             //RadishCoin.AddBlock(new Block(1, DateTime.Parse("10/10/2024"), transaction));
             //RadishCoin.AddBlock(new Block(2, DateTime.Parse("11/11/2024"), transaction2));
@@ -33,9 +34,11 @@ namespace RadishCoinConsoleApp
             Console.WriteLine("Wait for each Block to be mined!\n");
             Console.WriteLine("Block 1 is being mined...");
             RadishCoin.AddBlock(new Block(1, DateTime.Parse("10/10/2024"), transaction));
+            Console.WriteLine("Difficulty: " + RadishCoin.GetLatestBlock().Hash + RadishCoin.GetLatestBlock().PreviousHash + RadishCoin.GetLatestBlock().Difficulty);
 
             Console.WriteLine("\n\nBlock 2 is being mined...");
             RadishCoin.AddBlock(new Block(2, DateTime.Parse("11/11/2024"), transaction2));
+            Console.WriteLine("Difficulty: " + RadishCoin.GetLatestBlock().Hash + RadishCoin.GetLatestBlock().PreviousHash + RadishCoin.GetLatestBlock().Difficulty);
 
             Console.ReadLine();
 
