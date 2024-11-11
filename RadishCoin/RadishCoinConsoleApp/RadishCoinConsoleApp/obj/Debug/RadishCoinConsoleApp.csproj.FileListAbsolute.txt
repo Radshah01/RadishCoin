@@ -1,0 +1,7 @@
+C:\git\RadishCoin\RadishCoinConsoleApp\RadishCoinConsoleApp\bin\Debug\RadishCoinConsoleApp.exe.config
+C:\git\RadishCoin\RadishCoinConsoleApp\RadishCoinConsoleApp\bin\Debug\RadishCoinConsoleApp.exe
+C:\git\RadishCoin\RadishCoinConsoleApp\RadishCoinConsoleApp\bin\Debug\RadishCoinConsoleApp.pdb
+C:\git\RadishCoin\RadishCoinConsoleApp\RadishCoinConsoleApp\obj\Debug\RadishCoinConsoleApp.csproj.AssemblyReference.cache
+C:\git\RadishCoin\RadishCoinConsoleApp\RadishCoinConsoleApp\obj\Debug\RadishCoinConsoleApp.csproj.CoreCompileInputs.cache
+C:\git\RadishCoin\RadishCoinConsoleApp\RadishCoinConsoleApp\obj\Debug\RadishCoinConsoleApp.exe
+C:\git\RadishCoin\RadishCoinConsoleApp\RadishCoinConsoleApp\obj\Debug\RadishCoinConsoleApp.pdb
