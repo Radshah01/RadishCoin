@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
@@ -31,11 +32,21 @@ namespace RadishCoinConsoleApp
             
         }
 
+        public override string ToString()
+        {
+            return $"{this.Index}  + {this.TimeStamp} + {this.Data}+ {this.PreviousHash} + {this.Hash}";
+        }
 
         public string CalculateHash()
         {
-            SHA256 hash = SHA256.Create(this.Index.ToString() + this.PreviousHash + this.TimeStamp.ToString() + this.Data);
-            return hash.ToString();
+            using (SHA256 sha256 = SHA256.Create())
+            {
+                string rawData = $"{this.Index} + {this.PreviousHash} + {this.TimeStamp} + {this.Data}";
+
+                byte[] bytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(rawData)) ;
+                return Convert.ToBase64String(bytes) ;
+            }
+           
         }
     }
 

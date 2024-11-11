@@ -16,7 +16,13 @@ namespace RadishCoinConsoleApp
             RadishCoin.AddBlock(new Block(1, DateTime.Parse("10/10/2024"), "amount: 4"));
             RadishCoin.AddBlock(new Block(2, DateTime.Parse("11/11/2024"), "amount: 10"));
 
-            Console.WriteLine(RadishCoin.ToString());
+            for (int i = 0; i < RadishCoin.chain.Count; i++) {
+                Console.WriteLine(RadishCoin.chain[i].ToString());
+            }
+            
+
+            Console.ReadLine();
+
         }
     }
 }
