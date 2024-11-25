@@ -12,11 +12,10 @@ namespace RadishCoinConsoleApp
 {
     public class Block
     {   
-        public int Index { get; set; }
-
+       
         public DateTime TimeStamp { get; set; }
 
-        public object Data { get; set; }
+        public List<Transaction> Transactions { get; set; } = new List<Transaction>(); 
 
         public string Hash { get; set; } = "";
 
@@ -29,11 +28,10 @@ namespace RadishCoinConsoleApp
         public int nonce { get; set; } = 0;
 
 
-        public Block(int index, DateTime timeStamp, object data, string previousHash = "")
+        public Block(DateTime timeStamp, List<Transaction> transactions, string previousHash = "")
         {
-            this.Index = index;
             this.TimeStamp = timeStamp;
-            this.Data = data;
+            this.Transactions = transactions;
             this.PreviousHash = previousHash;
             this.Hash = this.CalculateHash();
         }
@@ -46,13 +44,12 @@ namespace RadishCoinConsoleApp
         //public override string ToString()
         //{
         //    return $"{this.Index}  + {this.TimeStamp} + {this.Data}+ {this.PreviousHash} + {this.Hash}";
-        //}
-
+        //}     
         public string CalculateHash()
         {
             using (SHA256 sha256 = SHA256.Create())
             {
-                string rawData = $"{this.Index} + {this.PreviousHash} + {this.TimeStamp} + {this.ToJson(this.Data)} + {this.nonce}";
+                string rawData = $"{this.PreviousHash} + {this.TimeStamp} + {this.ToJson(this.Transactions)} + {this.nonce}";
 
                 byte[] bytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(rawData)) ;
                 return Convert.ToBase64String(bytes) ;
@@ -68,11 +65,10 @@ namespace RadishCoinConsoleApp
             {
                 this.nonce++;
                 this.Hash = this.CalculateHash() ;
-
                 
             }
 
-            Console.WriteLine("Congrats! A block has been mined:\nMined Block Hash: " + this.Hash);
+            Console.WriteLine("Congrats! A block has been mined: \n{\n\tMined Block Hash: " + this.Hash + "\n\tMined Block Difficulty: " + (DifficultyEnum)difficulty+ "\n}");
         }
     }
 

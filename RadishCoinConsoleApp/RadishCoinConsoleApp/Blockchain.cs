@@ -13,6 +13,10 @@ namespace RadishCoinConsoleApp
     {
         public List<Block> chain = new List<Block>();
 
+        public List<Transaction> pendingTransactions = new List<Transaction>();
+
+        public double miningPrize { get; set; } = 100d;
+
         public Blockchain()
         {
             this.chain.Add(this.CreateGenesisBlock());
@@ -20,7 +24,11 @@ namespace RadishCoinConsoleApp
 
         public Block CreateGenesisBlock()
         {
-            return new Block(0, DateTime.Parse("01/01/2020"), "Genesis Block", "0");
+            List<Transaction> TransactionList = new List<Transaction>();
+            Transaction GenesisTransaction = new Transaction("Genesis", "GenesisReceiver", 0);
+            TransactionList.Add(GenesisTransaction);
+
+            return new Block(DateTime.Parse("01/01/2020"), TransactionList, "0");
         }
 
         public Block GetLatestBlock()
@@ -28,17 +36,60 @@ namespace RadishCoinConsoleApp
             return this.chain[this.chain.Count -1];
         }
 
-        public void AddBlock(Block newBlock)
+        //public void AddBlock(Block newBlock)
+        //{
+        //    Random rnd = new Random();
+        //    newBlock.PreviousHash = this.GetLatestBlock().Hash;
+        //    newBlock.MineBlock(DifficultyEnum.Difficult);
+        //    this.chain.Add(newBlock);
+        //}
+
+        public void MinePendingTransactions(string miningPrizeAddress)
         {
             Random rnd = new Random();
-            newBlock.PreviousHash = this.GetLatestBlock().Hash;
-            newBlock.MineBlock((DifficultyEnum)rnd.Next(1, 4));
+            Block newBlock = new Block(DateTime.Now, this.pendingTransactions);
+            Transaction newTransaction = new Transaction(null, miningPrizeAddress, this.miningPrize);
+
+            newBlock.MineBlock((DifficultyEnum)rnd.Next(1,4)); 
+
+
             this.chain.Add(newBlock);
+            this.pendingTransactions.Add(newTransaction);
         }
 
-        public string ToJson(object obj)
+        public void CreateTransaction(Transaction transaction)
         {
-            return JsonConvert.SerializeObject(obj, Newtonsoft.Json.Formatting.Indented);
+            this.pendingTransactions.Add(transaction);
+        }
+
+        public double GetBalanceOfAddress(string address)
+        {
+            double balance = 0;
+
+            foreach (Block block in this.chain)
+            {
+         
+                foreach(Transaction trans in block.Transactions)
+                {
+                    if (trans.SenderAddress == address)
+                    {
+                        balance -= trans.Amount;
+                    }
+
+                   if (trans.ReceiverAddress == address)
+                    {
+                        balance += trans.Amount;
+                    }
+                }
+            }
+            Console.WriteLine($"{balance}");
+            return balance;
+        }
+
+
+        public string ToJson()
+        {
+            return JsonConvert.SerializeObject(this.chain, Newtonsoft.Json.Formatting.Indented);
         }
 
         public bool IsChainValid()
